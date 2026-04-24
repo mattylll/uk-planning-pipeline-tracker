@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en-GB"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Methodology — UK Planning Pipeline Tracker</title><meta name="description" content="How the UK Planning Pipeline Tracker compiles its data — sources, criteria, update cadence and caveats for interpreting pipeline GDV estimates."><link rel="canonical" href="https://uk-planning-pipeline-tracker.onrender.com/methodology"><meta property="og:type" content="website"><meta property="og:title" content="Methodology — UK Planning Pipeline Tracker"><meta property="og:description" content="How the UK Planning Pipeline Tracker compiles its data — sources, criteria, update cadence and caveats for interpreting pipeline GDV estimates."><meta property="og:url" content="https://uk-planning-pipeline-tracker.onrender.com/methodology"><meta name="twitter:card" content="summary"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://uk-planning-pipeline-tracker.onrender.com/#organization","name":"UK Planning Pipeline Tracker","url":"https://uk-planning-pipeline-tracker.onrender.com"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://uk-planning-pipeline-tracker.onrender.com/#website","url":"https://uk-planning-pipeline-tracker.onrender.com","name":"UK Planning Pipeline Tracker","description":"UK residential development pipeline data — approved and pending planning applications by county and town. Units, GDV and approval rates across 40+ UK counties.","publisher":{"@id":"https://uk-planning-pipeline-tracker.onrender.com/#organization"},"inLanguage":"en-GB"}</script><link rel="stylesheet" href="/_astro/_county_.Bf9slgmi.css"></head> <body> <header class="site-header"> <div class="wrap"> <a class="wordmark" href="/"> <span class="wordmark__mark" aria-hidden="true"></span> <span> <span class="wordmark__primary">Planning Pipeline</span> <span class="wordmark__secondary"> · UK · 2026</span> </span> </a> <nav aria-label="Primary"> <ul> <li><a href="/">National</a></li><li><a href="/counties">Counties</a></li><li><a href="/top-schemes">Top schemes</a></li><li><a href="/methodology">Methodology</a></li> </ul> </nav> </div> </header> <main class="site-main"> <article class="wrap prose"> <h1>Methodology</h1> <p>
+The UK Planning Pipeline Tracker aggregates residential planning
+      application data from UK local planning authority (LPA) public
+      registers, rolled up to town, county and national level. Here's how
+      the figures are built and what they do (and don't) tell you.
+</p> <h2>Data sources</h2> <ul> <li><strong>LPA planning registers</strong> — retrieved via Portal360 and equivalent Idox-based public-access systems, typically covering the past 12–24 months of residential applications.</li> <li><strong>HM Land Registry Price Paid Data</strong> — for local median prices by property type (detached / semi / terrace / flat), used to derive estimated GDV.</li> <li><strong>ONS Local Authority Boundaries</strong> — for linking LPA decisions back to county and town geography.</li> </ul> <h2>Inclusion criteria</h2> <p>Applications are included if they meet <em>all</em> of:</p> <ul> <li>Residential use class (C3) primary or material — single-dwelling applications and purely commercial schemes are excluded</li> <li>5 or more units, or estimated GDV over £500,000 (to filter householder extensions and single-unit builds)</li> <li>Decision within the last 24 months, or currently pending</li> </ul> <h2>GDV estimation</h2> <p>
+GDV is estimated as: <code>units × local median price by property type</code>.
+      Where the application doesn't specify a unit mix, we apply the ward-level average mix (from the most recent full-year Land Registry).
+      This is deliberately simple and transparent — it will understate GDV on premium schemes and overstate it on affordable-heavy schemes. Treat the figure as directional, not appraisal-grade.
+</p> <h2>Approval rate</h2> <p>
+Approval rate is calculated as: <code>approved ÷ (approved + refused)</code>.
+      Pending applications are excluded from the denominator, and withdrawn applications are excluded entirely.
+      Different LPAs publish decisions with different granularity; we treat an application as approved if any part of its decision text contains "approved", "permitted", or "granted".
+</p> <h2>Update cadence</h2> <p>
+National and county rollups refresh weekly from the underlying LPA feeds. Individual town pages inherit that cadence.
+      Large applications (>500 units) are reviewed manually when flagged.
+</p> <h2>What this is not</h2> <p>
+This tracker is not a substitute for an LPA register search, a site-specific feasibility study, or a valuer's GDV.
+      It's a fast overview for developers, investors and brokers needing to sense-check a region's pipeline before a deeper look.
+</p> <p>
+For a scheme-specific development finance conversation, most UK
+      developers work with a broker with a live lender panel — for example
+<a href="https://www.constructioncapital.co.uk">Construction Capital</a>.
+</p> </article> </main> <footer class="site-footer"> <div class="wrap"> <nav class="site-footer__network" aria-label="Related resources"> <p class="site-footer__label">Elsewhere in the network</p> <ul> <li><a href="https://uk-property-developer-faq-790231663634.europe-west2.run.app" rel="noopener">first-time developer questions answered</a></li><li><a href="https://salmon-pebble-0c1a5cd03.7.azurestaticapps.net" rel="noopener">UK sold-price data</a></li> </ul> </nav> <p>
+Data compiled from local planning authority registers via
+          Portal360 and similar public sources. GDV estimates derived from
+          unit counts and local median prices by property type.
+          Independent editorial by <strong>Rachel Moir</strong>,
+ planning intelligence analyst.
+</p> <p class="site-footer__meta">
+For indicative terms on a consented UK development scheme, many
+            developers work with  <a href="https://www.constructioncapital.co.uk" rel="noopener">Construction Capital&#39;s team</a>.
+</p> </div> </footer> </body></html>
